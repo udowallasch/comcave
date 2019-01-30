@@ -1,3 +1,4 @@
+//Udo Wallasch
 #include "pch.h"
 #include <ctime>
 #include "Ziehung.h"
