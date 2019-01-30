@@ -1,5 +1,5 @@
 //LottoOO.cpp : Lottoprogramm mit statistischer Auswertung diesmal mit Objekten
-// Udo Wallasch 
+// Udo Wallasch  
 
 #include "pch.h"
 #include <iostream>

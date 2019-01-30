@@ -3,7 +3,7 @@
 #include "Ziehung.h"
 
 
-array<size_t, 6> ziehung() {
+array<size_t, 6> ziehung() { 
 	array<size_t, 6> z{ 0,0,0,0,0,0 };
 	bool ready = false;
 	for (int i = 0; i < 6; i++) {
