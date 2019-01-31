@@ -3,7 +3,7 @@
 #include <ctime>
 #include "Ziehung.h"
 
-
+//liefert 6 Zufallszahen aus 1 bis 49 ohne Wiederholung
 array<size_t, 6> ziehung() { 
 	array<size_t, 6> z{ 0,0,0,0,0,0 };
 	bool ready = false;
@@ -26,10 +26,14 @@ array<size_t, 6> ziehung() {
 	return z;
 }
 
+//liefert eine Zufallszahl aus 1 bis 10
 size_t superzahl() {
 	return (rand() % 10 + 1);
 }
 
+//die Schnittstelle der Klasse Ziehung.
+//liefert eine komplette Ziehung (einen 'wurf') 
+//bestehend aus 6 Zufallszahlen o.Wdh. und einer Superzahl
 wurf Ziehung::ziehe() {
 	wurf w;
 	w.w = ziehung();

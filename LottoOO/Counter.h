@@ -8,7 +8,7 @@
 
 using  std::array;
 
-//Ein staistisches Ergebnis der n Ziehungen 6 aus 49: 
+//Ein statistisches Ergebnis der n Ziehungen 6 aus 49: 
 //	max die (meist) gezogene Ziffer und 
 //  number wie oft sie gesogen wurde 
 struct t6 {

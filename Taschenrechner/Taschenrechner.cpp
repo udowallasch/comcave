@@ -1,4 +1,7 @@
 // Taschenrechner.cpp
+//liest zeilenweise eine Operation und ihre Operanden ein und gibt das Ergebnis
+//Kettenrechnungen sind möglich - das jeweils letzte Ergebnis wird als erster
+//Operand der nächsten Rechnung genommen.
 //Udo Wallasch
 
 #include "pch.h"
