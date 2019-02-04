@@ -5,13 +5,12 @@
 #include <iostream>
 #include "Term.h"
 
+using::Term;
+
 int main()
 {
-	Term T1, t2, t3, t4, t5;
-	term t1;
-
-
-
-
+//	Term root = new Term(2, '*');
+	
+	
 }
 

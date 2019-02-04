@@ -6,7 +6,6 @@
 #include <variant>
 
 using std::vector;
-using std::variant;
 
 bool calcTermParts(vector<double>*, vector<char>*, char);
 
@@ -17,29 +16,35 @@ double fctDiv(double, double);
 double fctSqrt(double);
 double fctCalc(double, double, char);
 
-
-
-struct term {
-	void* t{ nullptr };
-	double* d{ nullptr };
-	char o{ 'n' };
-};
-
 class Term
 {
+	struct term {
+		Term* const t_{ nullptr };
+		double* const d_{ nullptr };
+		char o_{ 'n' };
+
+		term(Term* t) :t_(t) {}
+		term(double* d, char o) :d_(d), o_(o) {}
+
+	};
+public:
+	void add(term);
+	void open();
+	double close();
+	double calc();
+	void clear();
+	Term(Term* t) { terms.clear();  term t_(t); terms.push_back(t_); ot = t;  };
+	Term(double* d, char o) { terms.clear(); term t_(d, o); terms.push_back(t_); };
+	~Term();
+
+private:
+	Term();
+	Term* ot{ nullptr };	//geöffnete Klammer
 	vector<term> terms;		//der komplette Ausdruck mit allen geklammerten Termen
 	vector<double> vals;	//zur Berechnung des eigenen Wertes
 	vector<char> ops;		//zur Berechnung des eigenen Wertes
 
-public:
-	void add(term);
-	double calc();
-	void clear();
-	Term();
-	~Term();
 };
-
-
 
 
 #endif //TERM_H

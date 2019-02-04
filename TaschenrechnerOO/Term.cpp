@@ -85,13 +85,13 @@ void Term::add(term t) {
 
 double Term::calc() {
 	for (term t : terms) {
-		//if (t.t != nullptr) {
-		//	vals.push_back(((term)t).t->calc());			
-		//}
-		//else {
-		//	vals.push_back(*(t.d));
-		//}
-		//ops.push_back(t.o);
+		if (t.t_ != nullptr) {
+			vals.push_back((t.t_)->calc());			
+		}
+		else {
+			vals.push_back(*(t.d_));
+		}
+		ops.push_back(t.o_);
 	}
 	if (calcTermParts(&vals, &ops, '*')) {
 		if (calcTermParts(&vals, &ops, '/')) {
@@ -105,27 +105,33 @@ double Term::calc() {
 
 }
 
+void Term::open() {
+	if (nullptr != ot) {
+		ot->open();
+	} else {
+		ot = new Term();
+	}
+}
+
 void Term::clear() {
 	for (term t : terms) {
-		if (t.t != nullptr) {
-			t.t->clear();
+		if (t.t_ != nullptr) {
+			t.t_->clear();
 		}
-		delete t.d;
-		delete t.t;
+		delete t.d_;
+		delete t.t_;
 	}
 	terms.clear();
 }
 
 
-Term::Term(){}
-
 Term::~Term() {
 	for (term t : terms) {
-		if (t.t != nullptr) {
-			t.t->clear();
+		if (t.t_ != nullptr) {
+			t.t_->clear();
 		}
-		delete t.d;
-		delete t.t;
+		delete t.d_;
+		delete t.t_;
 	}
 };
 
