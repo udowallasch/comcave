@@ -5,7 +5,7 @@
 
 class Eingabe {
 public:
-	double getVal();
+	char getValOrBracket(double**);
 	char getOP(); //+,-,*,/,(,),=
 	Eingabe();
 	~Eingabe();

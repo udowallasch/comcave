@@ -17,6 +17,10 @@ int main()
 
 	std::cout << "\npd " << pd;
 	std::cout << "\n* pd " << *pd;
+
+	string line;
+	getline(cin, line);
+	cout << line;
 }
 
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"

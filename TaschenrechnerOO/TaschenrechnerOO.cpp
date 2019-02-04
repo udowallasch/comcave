@@ -3,10 +3,20 @@
 
 #include "pch.h"
 #include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <string>
 #include "Term.h"
 #include "Eingabe.h"
 
 using std::cout;
+using std::cin;
+using std::string;
+using std::stringstream;
+using std::setprecision;
+using std::to_string;
+
+bool cont();
 
 enum class STATES { 
 	W_f_V, //wait for operand 
@@ -19,82 +29,24 @@ int main()
  Term* root = new Term();
  Eingabe eing = Eingabe();
 
- root->setVal(1);
- root->setOp('+');
- root->setVal(2);
- root->setOp('*');
- root->open();
- root->setVal(3);
- root->setOp('+');
- root->setVal(4);
- root->close();
- double* erg = root->close();
- cout << "\n Ergebnis: " << *erg;
-
- delete (root);
-	
- root = new Term();
- root->setVal(1);
- root->setOp('+');
- root->setVal(2);
- root->setOp('*');
- root->open();
- root->setVal(3);
- root->setOp('+');
- root->setVal(4);
- root->close();
- root->setOp('+');
- root->setVal(2);
- root->setOp('*');
- root->open();
- root->setVal(3);
- root->setOp('+');
- root->setVal(4);
- root->close();
- erg = root->close();
- cout << "\n Ergebnis: " << *erg;
-
- delete (root);
-
- root = new Term();
- root->setVal(1);
- root->setOp('+');
- root->setVal(2);
- root->setOp('*');
- root->open();
- root->open();
- root->setVal(3);
- root->setOp('+');
- root->setVal(4);
- root->close();
- root->setOp('*');
- root->open();
- root->setVal(7);
- root->setOp('+');
- root->setVal(1);
- root->close();
- root->close();
- erg = root->close();
- cout << "\n Ergebnis: " << *erg;
- delete (root);
-
-
- while (true) {
+ do {
 	 STATES state;
 
 	 root = new Term();
 
-	//Berechnung startet mit einem Operanden!
-	 double first = eing.getVal(); 
-	 root->setVal(first);
-	 state = STATES::W_f_OP;
-
+	 state = STATES::W_f_V;
+	 stringstream ausgabe{"\n"};
+	 double* erg{};
 
 	 bool ready{ false };
 	 while (!ready) {
+		 system("CLS");
+		 cout << ausgabe.str();
+		 char op;
 		 switch (state) {
 		 case STATES::W_f_OP:
-			 char op = eing.getOP();
+			 op = eing.getOP();
+			 ausgabe << " " << op;
 			 switch (op) {
 			 case '+':
 			 case '-':
@@ -117,14 +69,47 @@ int main()
 			 }
 			 break;
 		 case STATES::W_f_V:
-			 double val = eing.getVal();
-			 root->setVal(val);
+			 double* val{};
+			 op = eing.getValOrBracket(&val);
+			 if (nullptr != val) {
+				 ausgabe << " "<< setprecision(2)<<*val;
+				 root->setVal(*val);
+			 } else if (op == '(') {
+				 ausgabe << " "<< op;
+				 root->open();
+				 state = STATES::W_f_V;
+				 break;
+			 }
 			 state = STATES::W_f_OP;
-
 			 break;
-
 		 }
 	 }
- }
+	 ausgabe << " " << setprecision(2) << *erg << "\n";
+		 system("CLS");
+	 cout << ausgabe.str();
+
+ } while (cont());
+
 }
 
+
+bool cont() {
+	while (true) {
+		char x = '?';
+
+		cout << "\n\nWeiter? J,j/N,n: "; 
+		cin >> x;
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		if (!cin) { continue; };
+		switch (x) {
+		case 'J':
+		case 'j': return true;
+			break;
+		case 'N':
+		case 'n': return false;
+			break;
+		default: continue;
+		}
+
+	}
+}
