@@ -11,8 +11,12 @@ int main()
 	int j = 2;
 	register string sr = "abcdefghijklmabcdefghijklmabcdefghijklmabcdefghijklmabcdefghijklm";
 	string s = sr;
+	double d{ 7 };
+	double *  pd;
+	pd = &d;
 
-	std::cout << "Hello World:" << sr << " " << s;
+	std::cout << "\npd " << pd;
+	std::cout << "\n* pd " << *pd;
 }
 
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"

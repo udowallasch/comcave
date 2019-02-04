@@ -77,22 +77,7 @@ double fctSqrt(double s) {
 	return sqrt(s);
 }
 
-
-
-void Term::add(term t) {
-	terms.push_back(t);
-}
-
 double Term::calc() {
-	for (term t : terms) {
-		if (t.t_ != nullptr) {
-			vals.push_back((t.t_)->calc());			
-		}
-		else {
-			vals.push_back(*(t.d_));
-		}
-		ops.push_back(t.o_);
-	}
 	if (calcTermParts(&vals, &ops, '*')) {
 		if (calcTermParts(&vals, &ops, '/')) {
 			if (calcTermParts(&vals, &ops, '+')) {
@@ -102,7 +87,6 @@ double Term::calc() {
 		}
 	}
 	return vals.at(0);
-
 }
 
 void Term::open() {
@@ -113,25 +97,42 @@ void Term::open() {
 	}
 }
 
-void Term::clear() {
-	for (term t : terms) {
-		if (t.t_ != nullptr) {
-			t.t_->clear();
+double* Term::close() {
+	if (nullptr != ot) {
+		double* val = ot->close();
+		if (nullptr != val) {
+			vals.push_back(*val);
+			delete (val);
+			ot->clear();
+			ot = nullptr;
+			return nullptr;
 		}
-		delete t.d_;
-		delete t.t_;
+	} else {
+		return new double(calc());
 	}
-	terms.clear();
+	
 }
 
-
-Term::~Term() {
-	for (term t : terms) {
-		if (t.t_ != nullptr) {
-			t.t_->clear();
-		}
-		delete t.d_;
-		delete t.t_;
+void Term::setOp(char op) {
+	if (nullptr != ot) {
+		ot->setOp(op);
+	} else {
+		ops.push_back(op);
 	}
-};
+}
+
+void Term::setVal(double val) {
+	if (nullptr != ot) {
+		ot->setVal(val);
+	} else {
+		vals.push_back(val);
+	}
+}
+
+void Term::clear() {
+	if (nullptr != ot) {
+		ot->clear();
+	}
+}
+
 

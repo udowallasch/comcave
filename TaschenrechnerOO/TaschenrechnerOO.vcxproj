@@ -151,13 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Ausgabe.h" />
     <ClInclude Include="Eingabe.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Rechner.h" />
     <ClInclude Include="Term.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Eingabe.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
