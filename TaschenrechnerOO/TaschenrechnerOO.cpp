@@ -26,14 +26,12 @@ enum class STATES {
 
 int main()
 {
- Term* root = new Term();
+ 
  Eingabe eing = Eingabe();
 
  do {
 	 STATES state;
-
-	 root = new Term();
-
+	 Term* root = new Term();
 	 state = STATES::W_f_V;
 	 stringstream ausgabe{"\n"};
 	 double* erg{};
@@ -72,7 +70,7 @@ int main()
 			 double* val{};
 			 op = eing.getValOrBracket(&val);
 			 if (nullptr != val) {
-				 ausgabe << " "<< setprecision(2)<<*val;
+				 ausgabe << " "<< setprecision(4)<<*val;
 				 root->setVal(*val);
 			 } else if (op == '(') {
 				 ausgabe << " "<< op;
@@ -84,10 +82,10 @@ int main()
 			 break;
 		 }
 	 }
-	 ausgabe << " " << setprecision(2) << *erg << "\n";
+	 ausgabe << " " << setprecision(4) << *erg << "\n";
 		 system("CLS");
 	 cout << ausgabe.str();
-
+	 delete root;
  } while (cont());
 
 }
