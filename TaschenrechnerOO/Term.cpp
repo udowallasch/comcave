@@ -8,9 +8,9 @@ using std::cout;
 
 bool calcTermParts(vector<double>* vars, vector<char>* ops, char op) {
 	double erg = -1;
-	bool ready = false;
 	auto ito = ops->begin();
 	auto itv = vars->begin();
+	bool ready = (ops->size() == 0);
 	while (!ready) {
 		if (*ito == op) {
 			double var1 = *itv;
