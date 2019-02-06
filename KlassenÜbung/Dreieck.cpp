@@ -37,6 +37,8 @@ Point Dreieck::getC() {
 	return C;
 };
 
-
+Point** Dreieck::getCoords() {
+	return d;
+}
 
 Dreieck::~Dreieck() {}

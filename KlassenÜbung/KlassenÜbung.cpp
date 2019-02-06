@@ -84,6 +84,11 @@ int main()
 		cout << "\n Dreieck  by value: "; print(d);
 		cout << "\n Dreieck  by ref: "; printR(d);
 		cout << "\n Dreieck  by addr: "; print(&d);
+		cout << "\n Dreieck getCoords:";
+		d.getCoords()[0]->print();
+		d.getCoords()[1]->print();
+		d.getCoords()[2]->print();
+
 
 		Rechteck r = Rechteck(2, 3);
 		cout << "\n Rechteck  by value: "; print(r);
