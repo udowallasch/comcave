@@ -83,7 +83,7 @@ int main()
 		 }
 	 }
 	 ausgabe << " " << setprecision(4) << *erg << "\n";
-		 system("CLS");
+	 system("CLS");
 	 cout << ausgabe.str();
 	 delete root;
  } while (cont());
