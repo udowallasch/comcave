@@ -87,7 +87,8 @@ int main()
 		cout << "\n Dreieck getCoords:";
 		d.getCoords()[0]->print();
 		d.getCoords()[1]->print();
-		d.getCoords()[2]->print();
+		d.getCoords()[2]->print(); 
+		(*d.getCoords()[2]).print();
 
 
 		Rechteck r = Rechteck(2, 3);
