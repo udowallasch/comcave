@@ -26,11 +26,20 @@ double Rechteck::getB() {
 };
 
 void Rechteck::printc() {
-	cout << "Laenge = " << a << " Breite = " << b << " count: " << count;
+	cout << sprint();
 	count++;
 }
 
 void Rechteck::print() const {
-	cout << "Laenge = " << a << " Breite = " << b << " count: " << count;
+	cout << sprint();
 }
+
+
+string Rechteck::sprint() const {
+	stringstream ss{};
+	ss << setprecision(4) << "Laenge = " << a << " Breite = " << b << " count: " << count;
+	return ss.str();
+}
+
+
 Rechteck::~Rechteck() {}

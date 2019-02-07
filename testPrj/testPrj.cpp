@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
-#include <string>
+//#include <string>
 using namespace std;
 int main()
 {
@@ -18,9 +18,11 @@ int main()
 	std::cout << "\npd " << pd;
 	std::cout << "\n* pd " << *pd;
 
-	string line;
-	getline(cin, line);
-	cout << line;
+	string line{ "abc" };
+	line.length();
+
+	//getline(cin, line);
+	//cout << line;
 }
 
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"

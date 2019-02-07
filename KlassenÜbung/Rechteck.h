@@ -9,6 +9,7 @@ public:
 	double getFlaeche() const override;
 	double getUmfang() const override;
 	void print() const override;
+	string sprint() const override;
 	void printc();
 
 	void setA(double);

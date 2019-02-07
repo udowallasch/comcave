@@ -9,9 +9,14 @@ double Dreieck::getUmfang() const {
 };
 
 void Dreieck::print() const {
-	cout << "a =" << A.sprint() << " b =" << B.sprint() << " c=" << C.sprint();
+	cout << sprint();
 };
 
+string Dreieck::sprint() const {
+	stringstream ss{};
+	ss << setprecision(4) << "a =" << A.sprint() <<  " b =" << B.sprint() << " c=" << C.sprint();
+	return ss.str();
+}
 
 void Dreieck::setA(Point p) {
 	A = p;
@@ -38,7 +43,7 @@ Point Dreieck::getC() {
 };
 
 Point** Dreieck::getCoords() {
-	return d;
+	return coords;
 }
 
 Dreieck::~Dreieck() {}

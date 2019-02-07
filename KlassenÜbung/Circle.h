@@ -12,6 +12,7 @@ public:
 	double getFlaeche() const override;
 	double getUmfang() const  override;
 	void print() const override;
+	string sprint() const override;
 
 	double getRadius();
 	Point getMP();

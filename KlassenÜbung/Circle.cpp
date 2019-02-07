@@ -28,10 +28,11 @@ double Circle::getUmfang() const {
 }
 
 void Circle::print() const {
-	stringstream ss{};
-	
-	ss << setprecision(4) << radius;		
-	cout << "R = " << ss.str() << ", M = " << M.sprint();
+	cout << sprint();
 }
 
-
+string Circle::sprint() const {
+	stringstream ss{};
+	ss << setprecision(4) << "R = " << radius << ", M = " << M.sprint();
+	return ss.str();
+}
