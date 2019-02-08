@@ -15,40 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Rechteck.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Dreieck.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Figur.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Point3D.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Teilnehmer.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Mensch.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Datum.h">
+    <ClInclude Include="..\Task_8.2.\pch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Adresse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Telefon.h">
+    <ClInclude Include="Datum.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Mensch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Name.h">
@@ -57,51 +33,36 @@
     <ClInclude Include="Objekt.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Teilnehmer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Telefon.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="KlassenÜbung.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Circle.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Rechteck.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Dreieck.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Figur.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Point3D.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Teilnehmer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Mensch.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Datum.cpp">
+    <ClCompile Include="..\Task_8.2.\Task_8.2.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Adresse.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Telefon.cpp">
+    <ClCompile Include="Datum.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Mensch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Name.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Objekt.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Teilnehmer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Telefon.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
