@@ -151,12 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Task_8.2.\pch.h" />
     <ClInclude Include="Adresse.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Mensch.h" />
     <ClInclude Include="Name.h" />
     <ClInclude Include="Objekt.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="Teilnehmer.h" />
     <ClInclude Include="Telefon.h" />
   </ItemGroup>
@@ -167,6 +167,7 @@
     <ClCompile Include="Mensch.cpp" />
     <ClCompile Include="Name.cpp" />
     <ClCompile Include="Objekt.cpp" />
+    <ClCompile Include="pch.cpp" />
     <ClCompile Include="Teilnehmer.cpp" />
     <ClCompile Include="Telefon.cpp" />
   </ItemGroup>
