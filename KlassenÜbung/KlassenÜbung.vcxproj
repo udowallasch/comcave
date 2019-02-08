@@ -152,17 +152,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Datum.h" />
     <ClInclude Include="Dreieck.h" />
     <ClInclude Include="Figur.h" />
+    <ClInclude Include="Mensch.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Point3D.h" />
     <ClInclude Include="Rechteck.h" />
+    <ClInclude Include="Teilnehmer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Dreieck.cpp" />
     <ClCompile Include="Figur.cpp" />
     <ClCompile Include="KlassenÜbung.cpp" />
+    <ClCompile Include="Mensch.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -170,7 +176,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Point3D.cpp" />
     <ClCompile Include="Rechteck.cpp" />
+    <ClCompile Include="Teilnehmer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

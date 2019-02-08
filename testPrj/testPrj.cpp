@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
-//#include <string>
+#include <string>
 using namespace std;
 int main()
 {
@@ -19,8 +19,11 @@ int main()
 	std::cout << "\n* pd " << *pd;
 
 	string line{ "abc" };
-	line.length();
 
+
+	line.length();
+	line = line + "a" + "b";
+	cout << line;
 	//getline(cin, line);
 	//cout << line;
 }

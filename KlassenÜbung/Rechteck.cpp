@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "Rechteck.h"
 
+using std::string;
+using std::stringstream;
+using std::setprecision;
+using std::cout;
+
 double Rechteck::getFlaeche() const {
 	return a * b;
 }
@@ -41,5 +46,3 @@ string Rechteck::sprint() const {
 	return ss.str();
 }
 
-
-Rechteck::~Rechteck() {}

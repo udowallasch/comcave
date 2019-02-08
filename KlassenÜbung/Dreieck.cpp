@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "Dreieck.h"
 
+using std::string;
+using std::stringstream;
+using std::setprecision;
+using std::cout;
+
 double Dreieck::getFlaeche() const {
 	return 1.1;
 }
@@ -45,5 +50,3 @@ Point Dreieck::getC() {
 Point** Dreieck::getCoords() {
 	return coords;
 }
-
-Dreieck::~Dreieck() {}

@@ -1,3 +1,6 @@
+#ifndef CIRCLE_H
+#define CIRCLE_H
+
 #pragma once
 
 #include "Point.h"
@@ -12,7 +15,7 @@ public:
 	double getFlaeche() const override;
 	double getUmfang() const  override;
 	void print() const override;
-	string sprint() const override;
+	std::string sprint() const override;
 
 	double getRadius();
 	Point getMP();
@@ -24,3 +27,4 @@ public:
 	~Circle() {};
 };
 
+#endif

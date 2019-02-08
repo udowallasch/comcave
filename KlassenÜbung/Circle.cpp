@@ -1,7 +1,10 @@
 #include "pch.h"
 #include "Circle.h"
 
-
+using std::string;
+using std::stringstream;
+using std::setprecision;
+using std::cout;
 
 double Circle::getRadius() {
 	return radius;

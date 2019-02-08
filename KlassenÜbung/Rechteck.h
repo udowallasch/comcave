@@ -1,3 +1,5 @@
+#ifndef RECHTECK_H
+#define RECHTECK_H
 #pragma once
 #include "Figur.h"
 
@@ -9,7 +11,7 @@ public:
 	double getFlaeche() const override;
 	double getUmfang() const override;
 	void print() const override;
-	string sprint() const override;
+	std::string sprint() const override;
 	void printc();
 
 	void setA(double);
@@ -21,6 +23,7 @@ public:
 
 	Rechteck(int a, int b) : a(a), b(b) {};
 	Rechteck() {};
-	~Rechteck();
+	~Rechteck() {};
 };
 
+#endif

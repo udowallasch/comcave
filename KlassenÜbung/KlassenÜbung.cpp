@@ -5,9 +5,14 @@
 #include <iostream>
 #include "Circle.h"
 #include "Point.h"
+#include "Point3D.h"
 #include "Rechteck.h"
 #include "Dreieck.h"
 
+using std::string;
+using std::stringstream;
+using std::setprecision;
+using std::cout;
 
 void print(Point);
 void printR(Point&);
@@ -30,14 +35,16 @@ void print(Rechteck);
 void printR(Rechteck&);
 void print(Rechteck*);
 
+void print(_3D::Point*);
+
 int main()
 {
 	//Circle c = Circle(5, Point(5, 5));
-	//Rechteck r = Rechteck(2, 3);
 	//Dreieck d = Dreieck(Point(1,1),Point(-2,0),Point(1,0));
 
-	//std::cout << "\nRechteck Flaeche: " << r.getFlaeche();
-	//std::cout << "\nRechteck Umfang: " << r.getUmfang();
+	Rechteck r1 = Rechteck(2, 3);
+	std::cout << "\nRechteck Flaeche: " << r1.getFlaeche();
+	std::cout << "\nRechteck Umfang: " << r1.getUmfang();
 	//
 	//std::cout << "\nKreis: "; c.print();
 
@@ -61,8 +68,8 @@ int main()
 
 
 	//-------------------------Task-------------------------------------
-		Circle c1 = Circle(5, Point(5, 5));
-		Circle c2 = Circle();
+		Circle c1{ 5, Point(5, 5) };
+		Circle c2{};
 
 		cout << "\n Circle 1 by value: "; print(c1);
 		cout << "\n Circle 1 by ref: "; printR(c1);
@@ -80,7 +87,7 @@ int main()
 		cout << "\n Circle 2 by addr: "; print(&c2);
 
 
-		Dreieck d = Dreieck(Point(1, 1), Point(-2, 0), Point(1, 0));
+		Dreieck d{ Point(1, 1), Point(-2, 0), Point(1, 0) };
 		cout << "\n Dreieck  by value: "; print(d);
 		cout << "\n Dreieck  by ref: "; printR(d);
 		cout << "\n Dreieck  by addr: "; print(&d);
@@ -91,16 +98,19 @@ int main()
 		(*d.getCoords()[2]).print();
 
 
-		Rechteck r = Rechteck(2, 3);
+		Rechteck r{ 2, 3 };
 		cout << "\n Rechteck  by value: "; print(r);
 		cout << "\n Rechteck  by ref: "; printR(r);
 		cout << "\n Rechteck  by addr: "; print(&r);
 
-		Point p = Point(1, 2);
+		Point p{ 1, 2 };
 		cout << "\n Point  by value: "; print(p);
 		cout << "\n Point  by ref: "; printR(p);
 		cout << "\n Point  by addr: "; print(&p);
 
+		_3D::Point p3d{ 1, 2, 3 };
+		cout << "\n Point 3D  by addr: "; print(&(p3d));
+		cout << "\n Point 3D: " << p3d.sprint();
 }
 
 
@@ -168,5 +178,9 @@ void printR(Point& c) {
 };
 
 void print(Point* c) {
+	c->print();
+};
+
+void print(_3D::Point* c) {
 	c->print();
 };

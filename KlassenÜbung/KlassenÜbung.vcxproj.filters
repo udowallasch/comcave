@@ -33,6 +33,18 @@
     <ClInclude Include="Figur.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Point3D.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Teilnehmer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Mensch.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Datum.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -54,6 +66,18 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Figur.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Point3D.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Teilnehmer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Mensch.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Datum.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,3 +1,5 @@
+#ifndef DREIECK_H
+#define DREIECK_H
 #pragma once
 
 #include "Point.h"
@@ -14,7 +16,7 @@ public:
 	double getFlaeche() const override;
 	double getUmfang() const override;
 	void print() const override;
-	string sprint() const override;
+	std::string sprint() const override;
 
 	void setA(Point);
 	void setB(Point);
@@ -29,6 +31,7 @@ public:
 	// das gilt nur für a!! Bei d[0] = &b geht's....
 	Dreieck(Point A, Point b, Point c) : A{ A }, B{ b }, C{ c } { coords[0] = &A; coords[1] = &B; coords[2] = &C; };
 	Dreieck() {};
-	~Dreieck();
+	~Dreieck() {};
 };
 
+#endif
