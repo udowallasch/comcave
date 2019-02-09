@@ -36,9 +36,9 @@ private:
 	geschlecht const g;
 	Datum  const geburtstag;
 	Name name;
-	Adresse adresse;
-	std::string email;
-	Telefon tel;
+	Adresse adresse{"","","","",""};
+	std::string email{};
+	Telefon tel{};
 		
 };
 

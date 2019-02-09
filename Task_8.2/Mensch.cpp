@@ -32,6 +32,7 @@ Telefon Mensch::getTelefon() const {
 std::string Mensch::toString() const {
 	stringstream ss{};
 	ss << name.toString << adresse.toString << "\nemail: " << email << "\nTelefon:" << tel.toString;
+	return ss.str();
 };
 
 
