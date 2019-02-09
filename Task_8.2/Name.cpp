@@ -34,6 +34,7 @@ string Name::getVorname() const {
 			}		
 		}		
 	}
+	return vn.c_str();
 };
 
 string Name::getNachname() const {
@@ -41,6 +42,7 @@ string Name::getNachname() const {
 	for (auto n : nachname) {
 		nn += n;
 	}
+	return nn.c_str();
 };
 
 string Name::toString() const {

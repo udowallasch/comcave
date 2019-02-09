@@ -8,20 +8,17 @@ string Datum::toString() const {
 	return to_string(t) + "." + to_string(m) + "." + to_string(j);
 };
 
-string Datum::toString(dotDat& d) const {
-	d.dat = to_string(t) + "." + to_string(m) + "." + to_string(j);
-	return d.dat;
+string Datum::toString(dotDat d) const {
+	return to_string(t) + "." + to_string(m) + "." + to_string(j);
 };
 
-string Datum::toString(slashDat& d) const {
-	d.dat = to_string(t) + "/" + to_string(m) + "/" + to_string(j);
-	return d.dat;
+string Datum::toString(slashDat) const {
+	return to_string(t) + "/" + to_string(m) + "/" + to_string(j);
 
 };
 
-string Datum::toString(isoDat& d) const {
-	d.dat = to_string(j) + "-" + to_string(m) + "-" + to_string(t);
-	return d.dat;
+string Datum::toString(isoDat) const {
+	return to_string(j) + "-" + to_string(m) + "-" + to_string(t);
 };
 
 

@@ -31,19 +31,27 @@ Telefon Mensch::getTelefon() const {
 
 std::string Mensch::toString() const {
 	stringstream ss{};
-	ss << name.toString << adresse.toString << "\nemail: " << email << "\nTelefon:" << tel.toString;
+	ss << name.toString() << adresse.toString() << "\nemail: " << email << "\nTelefon:" << tel.toString();
 	return ss.str();
 };
 
+string Mensch::getName() const {
+	return name.toString();
+}
 
-Mensch::Mensch(geschlecht g, Datum d) : g(g), geburtstag(d) {};
+Datum Mensch::getGeburtstag() const {
+	return geburtstag;
+}
+
+
+Mensch::Mensch(Name n, geschlecht g, Datum d) : name{n}, g(g), geburtstag(d) {};
 //hier wird noch nicht delegiert!
 // weil  : g(g), geburtstag(d), adresse(a) { }; ist (wohl?) noch schneller als
 //		 : Mensch(g, d)  {adresse(a)};
-Mensch::Mensch(geschlecht g, Datum d, Adresse a) : g(g), geburtstag(d), adresse(a) { };
+Mensch::Mensch(Name n, geschlecht g, Datum d, Adresse a) : name{ n }, g(g), geburtstag(d), adresse(a) { };
 //...jetzt wird delegiert
-Mensch::Mensch(geschlecht g, Datum d, Adresse a, Telefon t) : Mensch(g, d, a) { Telefon(t); };
-Mensch::Mensch(geschlecht g, Datum d, Adresse a, std::string e) : Mensch(g, d, a) { email = e; };
-Mensch::Mensch(geschlecht g, Datum d, Adresse a, std::string e, Telefon t) : Mensch(g, d, a, e) { Telefon(t); };
+Mensch::Mensch(Name n, geschlecht g, Datum d, Adresse a, Telefon t) : Mensch(n, g, d, a) { tel = t; };
+Mensch::Mensch(Name n, geschlecht g, Datum d, Adresse a, std::string e) : Mensch(n, g, d, a) { email = e; };
+Mensch::Mensch(Name n, geschlecht g, Datum d, Adresse a, std::string e, Telefon t) : Mensch(n, g, d, a, e) { tel = t; };
 
 Mensch::~Mensch() {}

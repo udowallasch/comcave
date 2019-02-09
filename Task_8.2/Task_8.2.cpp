@@ -3,19 +3,21 @@
 
 #include "pch.h"
 #include <iostream>
+#include "Teilnehmer.h"
+
+using std::cout;
+
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+//Teilnehmer::Teilnehmer(Mensch m, int k, Datum e, Datum a, bool c, std::string t)
+
+Teilnehmer t1{Mensch{Name{"Udo","Wallasch"}, Mensch::geschlecht::M, Datum{1,Datum::Nov,58}}, 4711, Datum{8,Datum::Jan,2019}, Datum{6,Datum::Mar,2019}, false, "ARGE"};
+
+cout <<t1.getName();
+cout << "\n" << t1.getGeburtstag().toString(dotDat{});
+cout << "\n" << t1.getGeburtstag().toString(slashDat{});
+cout << "\n" << t1.getGeburtstag().toString(isoDat{});
+
 }
 
-// Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
-
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.

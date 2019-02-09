@@ -22,20 +22,23 @@ public:
 	std::string getEmail() const;
 	void setTelefon(Telefon);
 	Telefon getTelefon() const;
+	std::string getName() const;
+	Datum getGeburtstag() const;
 	std::string toString() const override;
 
-	Mensch(geschlecht, Datum);
-	Mensch(geschlecht, Datum, Adresse);
-	Mensch(geschlecht, Datum, Adresse, Telefon);
-	Mensch(geschlecht, Datum, Adresse, std::string);
-	Mensch(geschlecht, Datum, Adresse, std::string, Telefon );
+
+	Mensch(Name, geschlecht, Datum);
+	Mensch(Name, geschlecht, Datum, Adresse);
+	Mensch(Name, geschlecht, Datum, Adresse, Telefon);
+	Mensch(Name, geschlecht, Datum, Adresse, std::string);
+	Mensch(Name, geschlecht, Datum, Adresse, std::string, Telefon );
 	~Mensch();
 
 private:
 
+	Name name;
 	geschlecht const g;
 	Datum  const geburtstag;
-	Name name;
 	Adresse adresse{"","","","",""};
 	std::string email{};
 	Telefon tel{};
