@@ -35,7 +35,7 @@ Adresse::Adresse(std::string l, std::string p, std::string g, std::string s, std
 
 std::string Adresse::toString() const {
 	stringstream ss{};
-	ss << strasse << " " << hausnummer << "\n" << lkz << "-" << plz << gemeinde;
+	ss << strasse << " " << hausnummer << "\n" << lkz << "-" << plz<< " " << gemeinde;
 	return ss.str();
 };
 
