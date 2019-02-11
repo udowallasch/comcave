@@ -13,11 +13,11 @@ class Adresse : public Objekt {
 	std::string hausnummer;
 
 public:
-	std::string getPlz();
-	std::string getLkz();
-	std::string getGemeinde();
-	std::string getStrasse();
-	std::string getHausnummer();
+	std::string getPlz() const;
+	std::string getLkz() const;
+	std::string getGemeinde() const;
+	std::string getStrasse() const;
+	std::string getHausnummer() const;
 	Adresse(std::string, std::string, std::string, std::string, std::string);
 	std::string toString() const override;
 	~Adresse();

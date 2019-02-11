@@ -22,7 +22,7 @@ public:
 	std::string getEmail() const;
 	void setTelefon(Telefon);
 	Telefon getTelefon() const;
-	std::string getName() const;
+	Name getName() const;
 	Datum getGeburtstag() const;
 	std::string toString() const override;
 

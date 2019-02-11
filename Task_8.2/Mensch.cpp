@@ -31,12 +31,12 @@ Telefon Mensch::getTelefon() const {
 
 std::string Mensch::toString() const {
 	stringstream ss{};
-	ss << name.toString() << adresse.toString() << "\nemail: " << email << "\nTelefon:" << tel.toString();
+	ss << name.toString() <<"\n"<< adresse.toString() << "\nemail: " << email << "\nTelefon: " << tel.toString();
 	return ss.str();
 };
 
-string Mensch::getName() const {
-	return name.toString();
+Name Mensch::getName() const {
+	return name;
 }
 
 Datum Mensch::getGeburtstag() const {

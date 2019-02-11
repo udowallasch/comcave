@@ -11,8 +11,8 @@ class Telefon : public Objekt {
 public:
 	void setMobil(std::string);
 	void setFestnetz(std::string);
-	std::string getMobil();
-	std::string getFestnetz();
+	std::string getMobil() const;
+	std::string getFestnetz() const;
 
 	std::string toString() const override;
 	Telefon(std::string,std::string);

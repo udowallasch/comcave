@@ -3,23 +3,23 @@
 
 using std::stringstream;
 
-std::string Adresse::getPlz() {
+std::string Adresse::getPlz() const {
 	return plz;
 };
 
-std::string Adresse::getLkz() {
+std::string Adresse::getLkz() const {
 	return lkz;
 };
 
-std::string Adresse::getGemeinde() {
+std::string Adresse::getGemeinde() const {
 	return gemeinde;
 };
 
-std::string Adresse::getStrasse() {
+std::string Adresse::getStrasse() const {
 	return strasse;
 };
 
-std::string Adresse::getHausnummer() {
+std::string Adresse::getHausnummer() const {
 	return hausnummer;
 };
 

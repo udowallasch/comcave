@@ -1,9 +1,18 @@
 #include "pch.h"
 #include "Teilnehmer.h"
+#include<sstream>
 
+using std::stringstream;
 
 std::string Teilnehmer::toString() const {
-	return "Teilnehmer::toString() noch nicht implementiert";
+	stringstream ss{};
+	ss  << "Teilnehmer: "	<< Mensch::toString() 
+		<< "\nKursnummer: " << kursnummer
+		<< "\nEintritt: "	<< eintritt.toString(dotDat{}) 
+		<< "\nAustritt: "	<< austritt.toString(dotDat{})
+		<< "\nZertifikat: " << (certificat ? "Ja" : "Nein")
+		<< "\nNote: "		<< note;
+	return ss.str();
 };
 
 Datum Teilnehmer::getEintritt() {

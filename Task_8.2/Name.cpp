@@ -1,8 +1,10 @@
 #include "pch.h"
 #include "Name.h"
-
+#include<sstream>#
+#include<iostream>
 using std::string;
-
+using std::stringstream;
+using std::cout;
 
 void Name::setVorname(string v) {
 	vorname.clear();
@@ -14,7 +16,7 @@ void Name::setNachname(string n) {
 	nachname.push_back(n);
 };
 void Name::addVorname(string v) {
-	vorname.push_back(v);
+	vorname.push_back(v);	
 };
 
 void Name::addNachname(string n) {
@@ -22,27 +24,27 @@ void Name::addNachname(string n) {
 };
 
 string Name::getVorname() const {
-	string vn{};
-	for ( auto v : vorname) {
+	stringstream ss{};
+	for ( string v : vorname) {
 		if (v == "-") {
-			vn = vn + v;
+			ss << v;
 		} else {
-			if (vn == "") {
-				vn = v;
+			if (ss.str() == "") {
+				ss << v;
 			} else {
-				vn = vn + " " + v;
+				ss << " "<< v;
 			}		
 		}		
 	}
-	return vn.c_str();
+	return ss.str();
 };
 
 string Name::getNachname() const {
-	string nn{};
+	stringstream ss{};
 	for (auto n : nachname) {
-		nn += n;
+		ss << n;
 	}
-	return nn.c_str();
+	return ss.str();
 };
 
 string Name::toString() const {
