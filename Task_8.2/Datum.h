@@ -33,6 +33,7 @@ public:
 	~Datum();
 
 private:
+	// Datum ist Zeitstempel! -> keine setter.
 	int const t;
 	int const j;
 	monat const m;
