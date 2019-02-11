@@ -5,8 +5,8 @@
 #include "Objekt.h"
 #include "Datum.h"
 #include "Adresse.h"
-#include "Telefon.h"
 #include "Name.h"
+#include"Telefon.h"
 #include<string>
 #include<sstream>
 
@@ -22,7 +22,7 @@ public:
 	std::string getEmail() const;
 	void setTelefon(Telefon);
 	Telefon getTelefon() const;
-	Name getName() const;
+	Name& getName();
 	Datum getGeburtstag() const;
 	std::string toString() const override;
 

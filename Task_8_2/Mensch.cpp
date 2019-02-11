@@ -35,7 +35,7 @@ std::string Mensch::toString() const {
 	return ss.str();
 };
 
-Name Mensch::getName() const {
+Name& Mensch::getName() {
 	return name;
 }
 

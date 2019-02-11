@@ -24,6 +24,7 @@ std::string Mensch::getEmail() const {
 void Mensch::setTelefon(Telefon t) {
 	tel = t;
 };
+
 Telefon Mensch::getTelefon() const {
 	return tel;
 };

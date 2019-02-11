@@ -1,6 +1,7 @@
 #ifndef MENSCH_H
 #define MENSCH_H
 #pragma once
+
 #include "Objekt.h"
 #include "Datum.h"
 #include "Adresse.h"

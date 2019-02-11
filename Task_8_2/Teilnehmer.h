@@ -2,6 +2,7 @@
 #define TEILNEHMER_H
 #pragma once
 #include<string>
+#include"Telefon.h"
 #include "Mensch.h" 
 #include "Datum.h"
 
