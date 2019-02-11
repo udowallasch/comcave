@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="Adresse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -36,12 +39,12 @@
     <ClInclude Include="Telefon.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Task_8.2.\Task_8.2.cpp">
+    <ClCompile Include="pch.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_8_2.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Adresse.cpp">
@@ -63,9 +66,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Telefon.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
