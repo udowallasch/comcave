@@ -35,7 +35,7 @@ void Point::setY(double y) {
 	this->y = y;
 }
 
-double Point::dist(Point& p) const {
+double Point::dist(const Point& p) const {
 	return sqrt((x - p.getX())*(x - p.getX()) + (y - p.getY())*(y - p.getY()));
 };
 

@@ -15,7 +15,7 @@ public:
 	double getY() const;
 	void setX(double);
 	void setY(double);
-	double dist(Point&) const;
+	double dist(const Point&) const;
 
 	Point(double x = 0, double y = 0) : x(x) , y(y) {};
 	~Point();
