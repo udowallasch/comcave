@@ -49,7 +49,7 @@ int main()
 
 
 	int *b = &j;
-	int &c = *b;
+	int* &c = b;
 
 
 	*b = 1;
@@ -59,17 +59,21 @@ int main()
 	int d;
 	const int e{ 1 };
 	const int &f = d;
-	//f = e;
+	//f = 1;
 	const int &g = e;
 
-	const int *h;
-	*h++;
+	int const * const h = &e;
+	//h = &e;
+	//h = &d;
+	//*h = 1;
+
+	//*h++;
 	
 	const int *m = &d;
 	m = &e;
 
-	int *n = &e;
-	n = &d;
+	//int *n = &e;
+	//n = &d;
 
 	int * const p = &d;
 	int const *  r = &d;
