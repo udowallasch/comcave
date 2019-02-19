@@ -20,11 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FE028BDF-1C84-4B45-98A4-A7F89A9CAC7D}</ProjectGuid>
+    <ProjectGuid>{4EB62EFE-96FE-4407-BB84-8B065A3EDB0C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Task182</RootNamespace>
+    <RootNamespace>Task192</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>Task_18_2_dynamischer_speicher</ProjectName>
+    <ProjectName>Task_19_2_static</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -161,7 +161,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Task_18_2.cpp" />
+    <ClCompile Include="Task_19_2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

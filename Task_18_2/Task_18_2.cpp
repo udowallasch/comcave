@@ -28,7 +28,9 @@ int main() {
 	int * const ia = new int[3]{ 1,2,3 };
 	cout << ia << endl;
 	for (int i = 0; i < 3; i++) {
-		//cout << *(ia++) << ", "; -> geht nicht wg. ' * const' (Fehlervermeidung!!). Sonst würde mit ia++ delete nicht funktionieren und ein Speicherloch gerissen!!!
+		//cout << *(ia++) << ", "; -> geht nicht wg. ' * const' (zur Fehlervermeidung!!). 
+		//Wenn ginge (also ohne const Zeiger) würde mit ia++ das delete nicht funktionieren und ein Speicherloch gerissen!!!
+		// also besser so:
 		cout << *(ia + i) << ", "; //besser, da der Zeiger nicht verändert wird.
 	}
 	cout << ia << endl;
