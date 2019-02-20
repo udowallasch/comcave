@@ -4,7 +4,6 @@
 #include "Vector3d.h"
 
 using namespace std;
-class Vector3d;
 
 void Point3d::print() {
 	std::cout << "Point(" << x << " , " << y << " , " << z << ")" << std::endl;
