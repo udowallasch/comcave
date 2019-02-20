@@ -3,8 +3,8 @@
 
 #include "pch.h"
 #include <iostream>
-#include "Point3d.h"
 #include "Vector3d.h"
+#include "Point3d.h"
 
 
 int main() {
