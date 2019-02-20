@@ -23,11 +23,10 @@ public:
 	static int getMwst();
 	static void setMwst(int);
 	static int getAnzahl();
-
 	string drucke() const;
 
 private:
-	string const name;
+	string  const name;
 	int const artikelnummer;
 	double preis = 0;
 	static int mwst;
@@ -35,6 +34,7 @@ private:
 
 
 };
+
 int Produkt::anzahl = 0;
 int Produkt::mwst = 17;
 
@@ -58,7 +58,8 @@ Produkt::~Produkt() {
 }
 
 string  Produkt::getName() const {
-	Produkt p("asa",5);
+	Produkt p("asa",5);	
+	p.preis = 2.55;
 	return name;
 	
 }
@@ -120,6 +121,7 @@ int main() {
 	cout << "\n++++++++++++++\n";
 
 	(*lager.begin())->getName();
+	
 	cout << "\n++++++++++++++\n";
 
 
