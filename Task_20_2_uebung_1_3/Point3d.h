@@ -12,6 +12,8 @@ private:
 	Point3d(double, double, double);
 		void print();
 		void verschiebe_durch_vektor(const Vector3d &v);
+
+
 	};
 
 #endif

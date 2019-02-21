@@ -11,6 +11,8 @@ void Point3d::print() {
 
 void Point3d::verschiebe_durch_vektor(const Vector3d &v) {
 	// implementiere diese Methode als Freund von Vector3d
+	//this weg???
+	//cout << "verschiebe_durch_vektor:" << this->x << endl; //...geht aber!!!
 	x += v.x;
 	y += v.y;
 	z += v.z;
