@@ -54,8 +54,8 @@ ostream& operator<<(ostream& os, const Complex& c) {
 
 
 int main() {
-	Complex c1{ 3,4 };//
-	Complex c2{ 1,2 };//
+	Complex c1{ 2,5 };//
+	Complex c2{ 3,7 };//
 	Complex c = c1 + c2;//operator + muss überladen
 	cout << c << endl;
 	c = c1 * c2;
