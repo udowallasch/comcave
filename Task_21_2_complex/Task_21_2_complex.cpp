@@ -11,21 +11,33 @@ private:
 	double re;
 	double im;
 public:
-	Complex(double re, double im): re{re}, im{im}{}
+	Complex(double re=0, double im=0): re{re}, im{im}{}
 	string toString() const;
-	friend Complex operator+(Complex &, Complex &);
-	friend Complex operator-(Complex &, Complex &);
+	friend Complex operator+(const Complex &, const Complex &);
+	friend Complex operator-(const Complex &, const Complex &);
 	friend Complex operator*(Complex &, Complex &);
+//	friend Complex operator*(double, Complex &);
+//	friend Complex operator*(Complex &, double);
 	friend Complex operator/(Complex &, Complex &);
+	friend Complex operator+(double, Complex &);
+	friend Complex operator+(Complex &, double);
+	friend istream& operator>>(istream &, Complex&);
 
 };
 
 
-Complex operator+(Complex &a, Complex &b) {
+Complex operator+(const Complex &a, const  Complex &b) {
 	return Complex(a.re + b.re, a.im + b.im);
 }
 
-Complex operator-(Complex &a, Complex &b) {
+Complex operator+(double a, Complex &b) {
+	return Complex(a+ b.re, b.im);
+}
+Complex operator+(Complex &a, double b) {
+	return Complex(a.re + b, a.im );
+}
+
+Complex operator-(const Complex &a, const Complex &b) {
 	return Complex(a.re - b.re, a.im - b.im);
 }
 
@@ -43,10 +55,17 @@ Complex operator/(Complex &a, Complex &b) {
 
 string Complex::toString() const {
 	stringstream ss{};
-	ss << "[ " << re << " | " << im << " ]";
+	ss << re << (this->im > 0 ? " +" : " ") << im << "i";
 	return ss.str();
 }
 
+// >> ist befreundet, kann deshalb direkt auf die privaten member von &c zugreifen
+istream& operator>>(istream & is, Complex& c){
+	return is >> c.re >> c.im;
+}
+
+// << ist nicht befreundet, deshalb muss << den toString von &c nutzen. Geht auch. 
+// Gut im Sinne der Sichtbarkeitsminimierung.
 ostream& operator<<(ostream& os, const Complex& c) {
 	os << c.toString();
 	return os;
@@ -64,8 +83,17 @@ int main() {
 	cout << c<< endl;
 	c = c1 - c2;
 	cout << c << endl;
-	cout << c << c1 << c2;
-	
+	cout << c<<" " << c1<<" " << c2;
+
+	//Achtung WICHTIG!!!!!
+	// Damit solche Kettenrechnungen funktionieren, müssen die Referenz-Parameter der überladenen Operatoren
+	// 'const' sein! Sonst funktioniert das nicht, weil versucht würde Zwischenergebnisse (Werte!) in einer nicht 
+	// zugewiesen Referenz abzulegen etwa so : int& i = 4; -> geht nicht weil lvalue verlangt, aber const int& i = 4; geht.
+	c = c1+c2-c1;
+	Complex z1, z2;
+	cout << endl;
+	cin >> z1 >> z2;
+	cout << z1 << "  " << z2;
 	return 0;
 }
 

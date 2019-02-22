@@ -78,9 +78,9 @@ int main()
 	LandFahrzeug auto2(LandFahrzeug::TYPE::M,200);
 
 	Fahrzeug * pF1 = &boot1;
-	//Fahrzeug * pf2 = &auto1; geht nicht, da Verbung nicht public
+	//Fahrzeug * pf2 = &auto1; geht nicht, da Vererbung nicht public
 	LandFahrzeug * pf2 = &auto1;
-	// pf2->getVcur(); geht nicht, da Verbung nicht public
+	// pf2->getVcur(); geht nicht, da Vererbung nicht public
 	pf2->drucke(); cout << "\n";
 
 	boot1.drucke(); cout<<"\n";
