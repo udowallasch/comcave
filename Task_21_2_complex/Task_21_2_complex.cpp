@@ -55,20 +55,19 @@ Complex operator/(Complex &a, Complex &b) {
 
 string Complex::toString() const {
 	stringstream ss{};
-	ss << re << (this->im > 0 ? " +" : " ") << im << "i";
+	ss<<"(" << re << (this->im > 0 ? " +" : " ") << im << "i"<<")";
 	return ss.str();
 }
 
-// >> ist befreundet, kann deshalb direkt auf die privaten member von &c zugreifen
+// '>>' ist befreundet, kann deshalb direkt auf die privaten member von &c zugreifen
 istream& operator>>(istream & is, Complex& c){
 	return is >> c.re >> c.im;
 }
 
-// << ist nicht befreundet, deshalb muss << den toString von &c nutzen. Geht auch. 
-// Gut im Sinne der Sichtbarkeitsminimierung.
+// '<<' ist nicht befreundet, deshalb muss er den toString von &c nutzen. Geht auch. 
+// Ist gut im Sinne der Sichtbarkeitsminimierung.
 ostream& operator<<(ostream& os, const Complex& c) {
-	os << c.toString();
-	return os;
+	return os << c.toString();
 }
 
 
@@ -88,7 +87,7 @@ int main() {
 	//Achtung WICHTIG!!!!!
 	// Damit solche Kettenrechnungen funktionieren, müssen die Referenz-Parameter der überladenen Operatoren
 	// 'const' sein! Sonst funktioniert das nicht, weil versucht würde Zwischenergebnisse (Werte!) in einer nicht 
-	// zugewiesen Referenz abzulegen etwa so : int& i = 4; -> geht nicht weil lvalue verlangt, aber const int& i = 4; geht.
+	// zugewiesenen Referenz abzulegen etwa so : int& i = 4; -> geht nicht weil lvalue verlangt, aber const int& i = 4; geht.
 	c = c1+c2-c1;
 	Complex z1, z2;
 	cout << endl;
