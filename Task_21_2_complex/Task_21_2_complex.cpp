@@ -11,31 +11,49 @@ private:
 	double re;
 	double im;
 public:
+	double getRe() const;
+	double getIm() const;
 	Complex(double re=0, double im=0): re{re}, im{im}{}
 	string toString() const;
-	friend Complex operator+(const Complex &, const Complex &);
+//	friend Complex operator+(const Complex &, const Complex &);
 	friend Complex operator-(const Complex &, const Complex &);
 	friend Complex operator*(Complex &, Complex &);
 //	friend Complex operator*(double, Complex &);
 //	friend Complex operator*(Complex &, double);
 	friend Complex operator/(Complex &, Complex &);
-	friend Complex operator+(double, Complex &);
-	friend Complex operator+(Complex &, double);
+//	friend Complex operator+(double, Complex &);  -> geht nicht als Methode!
+//	friend Complex operator+(Complex &, double);
 	friend istream& operator>>(istream &, Complex&);
+	Complex operator=(const Complex &);
 
+	Complex operator+(double);
+	Complex operator+( const Complex &);
 };
 
-
-Complex operator+(const Complex &a, const  Complex &b) {
-	return Complex(a.re + b.re, a.im + b.im);
+double Complex::getRe() const {
+	return re;
+}
+double Complex::getIm() const {
+	return im;
 }
 
-Complex operator+(double a, Complex &b) {
-	return Complex(a+ b.re, b.im);
+Complex Complex::operator+(const  Complex &b) {
+	return Complex(this->re + b.re, this->im + b.im);
 }
-Complex operator+(Complex &a, double b) {
-	return Complex(a.re + b, a.im );
+
+Complex Complex::operator=(const  Complex &b) {
+	this->re = b.re;
+	this->im = b.im;
+	return *this;
 }
+
+Complex Complex::operator+(double a	) {
+	return Complex(a+ this->re,this->im);
+}
+
+//Complex operator+(Complex &a, double b) {
+//	return Complex(a.re + b, a.im );
+//}
 
 Complex operator-(const Complex &a, const Complex &b) {
 	return Complex(a.re - b.re, a.im - b.im);
@@ -76,6 +94,16 @@ int main() {
 	Complex c2{ 3,7 };//
 	Complex c = c1 + c2;//operator + muss überladen
 	cout << c << endl;
+	c = c1 + 6.0;
+	cout << c << endl;
+	c = c1;
+	cout << c << endl;
+	//c = 6.0 + c; -> geht nicht als Methode weil der linke Operand weggelassen werden müsste
+	cout << c << endl;
+	c = c1 = c2;
+	cout << c << endl;
+	cout << c1 << endl;
+
 	c = c1 * c2;
 	cout << c << endl;
 	c = c1 / c2;
@@ -95,5 +123,6 @@ int main() {
 	cout << z1 << "  " << z2;
 	return 0;
 }
+
 
 
