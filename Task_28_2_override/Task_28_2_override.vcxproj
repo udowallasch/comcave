@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -153,6 +153,11 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="uebung1a.h" />
+    <ClInclude Include="uebung1b.h" />
+    <ClInclude Include="uebung1c.h" />
+    <ClInclude Include="uebung1d.h" />
+    <ClInclude Include="uebung1e.h" />
+    <ClInclude Include="uebung1f.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geo.cpp" />
@@ -164,6 +169,11 @@
     </ClCompile>
     <ClCompile Include="Task_28_2_override.cpp" />
     <ClCompile Include="uebung1a.cpp" />
+    <ClCompile Include="uebung1b.cpp" />
+    <ClCompile Include="uebung1c.cpp" />
+    <ClCompile Include="uebung1d.cpp" />
+    <ClCompile Include="uebung1e.cpp" />
+    <ClCompile Include="uebung1f.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

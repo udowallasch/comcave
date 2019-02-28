@@ -4,6 +4,11 @@
 #include "pch.h"
 #include <iostream>
 #include "uebung1a.h"
+#include "uebung1b.h"
+#include "uebung1c.h"
+#include "uebung1d.h"
+#include "uebung1e.h"
+#include "uebung1f.h"
 #include <string>
 using namespace std;
 
@@ -51,10 +56,24 @@ int main() {
 	//cout << p->getName() << "  " << p->getLaut() << endl;//Lily Meow
 	//p = &d;
 	//cout << p->getName() << "  " << p->getLaut() << endl;//Paul Vau
-
+	cout << "------------ uebung1a -------------------------\n";
 	uebung1a a1;
 	a1.run();
-
+	cout << "------------ uebung1b -------------------------\n";
+	uebung1b b1;
+	b1.run();
+	cout << "------------ uebung1c -------------------------\n";
+	uebung1c c1;
+	c1.run();
+	cout << "------------ uebung1d -------------------------\n";
+	uebung1d d1;
+	d1.run();
+	cout << "------------ uebung1e -------------------------\n";
+	uebung1e e1;
+	e1.run();
+	cout << "------------ uebung1f -------------------------\n";
+	uebung1f f1;
+	f1.run();
 
 	return 0;
 }

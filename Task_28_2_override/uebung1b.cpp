@@ -1,4 +1,4 @@
-#include "uebung1a.h"
+#include "uebung1b.h"
 #include <string>
 #include <iostream>
 
@@ -15,7 +15,8 @@ namespace {
 	};
 
 	class C : public B {
-
+	public:
+		virtual string getName() const { return "C"; }
 	};
 
 	class D : public C {
@@ -24,11 +25,11 @@ namespace {
 	};
 }
 
-void uebung1a::run() {
+	void uebung1b::run() {
 
-	C c;
-	A &rBase = c;
-	cout << rBase.getName() << endl;
-	cout << "\nerwartet B weils die erste Ueberschreibung auf dem Weg nach oben ist\n";
-}
+		C c;
+		B &rBase = c;
+		cout << rBase.getName() << endl;
+		cout << "\nerwartet C wg virtual\n";
+	}
 

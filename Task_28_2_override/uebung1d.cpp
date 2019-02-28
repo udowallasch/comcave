@@ -1,4 +1,4 @@
-#include "uebung1a.h"
+#include "uebung1d.h"
 #include <string>
 #include <iostream>
 
@@ -11,24 +11,26 @@ namespace {
 
 	class B : public A {
 	public:
-		virtual string getName() const { return "B"; }
+		string getName() const { return "B"; }
 	};
 
 	class C : public B {
-
+	public:
+		string getName() const { return "C"; }
 	};
 
 	class D : public C {
 	public:
-		virtual string getName() const { return "D"; }
+		string getName() const { return "D"; }
 	};
 }
 
-void uebung1a::run() {
+void uebung1d::run() {
 
 	C c;
-	A &rBase = c;
+	B &rBase = c;
 	cout << rBase.getName() << endl;
-	cout << "\nerwartet B weils die erste Ueberschreibung auf dem Weg nach oben ist\n";
+	cout<<"\nerwartet C weil die virtuelle methode von B ueberschrieben wurde \n";
+
 }
 
