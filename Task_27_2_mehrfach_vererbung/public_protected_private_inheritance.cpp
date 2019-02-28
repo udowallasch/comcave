@@ -9,7 +9,8 @@ class A{
 	protected:
 		void protected_m_a(){cout << "protected_m_a aus A " << endl; }
 	public:
-		void public_m_a(){cout << "public_m_a aus A " << endl; }
+		virtual void public_m_a() { cout << "public_m_a aus A " << endl; }
+		void public_m_a(int i) { cout << "public_m_a aus A " <<i<< endl; }
 };
 class B : public A{//so machen wir es typischerweise
 	private:
@@ -25,6 +26,7 @@ class B : public A{//so machen wir es typischerweise
 			b.protected_m_a();//ok
 			a.public_m_a();//ok
 			*/
+			cout << "m aus B" << endl;
 		}
 	void test(){
 		/*
@@ -33,22 +35,24 @@ class B : public A{//so machen wir es typischerweise
 		b.i = 19;
 		b.m();*/
 	}
-	
+	//void public_m_a() { cout << "public_m_a aus B "  << endl; }
+
 };
-class C : protected A{
+class C : public  B{
 	/*
 	protected:
 	public_m_a
 	*/
-	
-	
+public:
+	void public_m_a() { cout << "public_m_a aus C " << endl; }
+
 };
 
 class D : private A{
 	
 };
 
-class F : /*default??*/ protected   A{ //Was wird standard mässig benutzt
+class F : /*default??*/ protected  A{ //Was wird standard mässig benutzt
 	void m() {
 		//this->private_m_a();
 		this->protected_m_a();//ok
@@ -88,18 +92,28 @@ int main(){
 	A a;
 		//a.private_m_a();//error
 		//a.protected_m_a();//error
-		a.public_m_a();//ok
+		//a.public_m_a();//ok
 	B b; 
 		//b.private_m_a();//error
 		//b.protected_m_a();//error
-		b.public_m_a();//ok
+		//b.public_m_a();//ok
+	//b.public_m_a(4711);//ok
 	C c;
 		//c.private_m_a();//error
 		//c.protected_m_a();//error
 		//c.public_m_a();//error, da diese Methode in C per protected Vererbung die Zurgriffskontrolle protected hat
 //	D d;
-	FF f;
-	F* ap = &f;
 
+	A * ap = &b;
+	ap->public_m_a();
+	//dynamic_cast<B*>(ap)->m();
+	c.public_m_a();
+	A* ac = &c;
+	ac->public_m_a();
+	A& ar = c;
+	ar.public_m_a();
+	B& br = c;
+	br.public_m_a();
+	br.public_m_a(1);
 	return 0;
 }
