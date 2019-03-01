@@ -83,7 +83,6 @@ int main(){
 
 	//cout << "\nFlaeche ist: " << getFlaeche(g, 5) << endl;
 
-		vector <Figure*> gebiet{};
 
 		//gebiet.push_back(new Rectangle{ Point(1, 2), 3, 4 });
 		//gebiet.push_back(new Rectangle{ Point(1, 2), 3, 4 });
@@ -96,22 +95,24 @@ int main(){
 		Rectangle *r3 = new Rectangle{ Point(1, 2), 3, 4 };
 		Circle *c1 = new Circle{ Point(0, 0), 1 };
 		Circle *c2 = new Circle{ Point(0, 0), 1 };
+		{
+		vector <Figure*> gebiet{};
 
-		gebiet.push_back(r1);
-		gebiet.push_back(r2);
-		gebiet.push_back(r3);
-		gebiet.push_back(c1);
-		gebiet.push_back(c2);
-
-		cout << "\nFlaeche ist: " << getFlaeche(gebiet) << endl;
+			gebiet.push_back(r1);
+			gebiet.push_back(r2);
+			gebiet.push_back(r3);
+			gebiet.push_back(c1);
+			gebiet.push_back(c2);
+			//std::cout << "\nFlaeche ist: " << getFlaeche(gebiet) << endl;
+			delete gebiet.at(0);
+			std::cout << "\nFlaeche ist: "  << endl;
+		}
+		//r1->area();
 		//delete r1;
-		Figure* r = gebiet.at(0);
-		cout << r->area() << endl;
-		delete r1;
 		//r1->area();
 		//for (auto it : gebiet) delete it;
 		//r1->area();
-	cout << "\ngleich ist schluss "<< endl;
+	std::cout << "\ngleich ist schluss "<< endl;
 
 //	Figure f = r1;
 //	cout << "\nf: " << f.area();
