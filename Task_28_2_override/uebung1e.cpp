@@ -28,8 +28,8 @@ namespace {
 void uebung1e::run() {
 
 	C c;
-	D d;
-	A &rBase = d;
+
+	A &rBase = c;
 	cout << rBase.getName() << endl;
 	cout << "\n A weil:  sucht ausgehend von A nach einer Ueberschreibung der A-Methode (incl const!). Der tiefste Treffer wird genommen \n";
 

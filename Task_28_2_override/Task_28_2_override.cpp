@@ -45,7 +45,7 @@ public:
 };
 
 
-int main() {
+int main1() {
 	//Cat c{ "Lily" };
 	//Dog d{ "Paul" };
 

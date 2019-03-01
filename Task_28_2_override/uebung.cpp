@@ -1,4 +1,4 @@
-#include "uebung1a.h"
+#include "uebung.h"
 #include <string>
 #include <iostream>
 
@@ -7,11 +7,13 @@ namespace {
 	class A {
 	public:
 		virtual string getName() const { return "A"; }
+		virtual string getName(int i) const { return "A"; }
 	};
 
 	class B : public A {
 	public:
-		virtual string getName() const { return "B"; }
+		virtual string getName()  { return "B"; }
+		//string getName(string d) { return "B"+d; }
 	};
 
 	class C : public B {
@@ -24,11 +26,14 @@ namespace {
 	};
 }
 
-void uebung1a::run() {
+void uebung::run() {
+	B b;
+	b.getName();
+	B* br= &b;
+//	br->getName(1); //geht nicht
+	A * ar = &b;
+	ar->getName(1);
 
-	C c;
-	A &rBase = c;
-	cout << rBase.getName() << endl;
-	cout << "\nerwartet B weils die letzte Ueberschreibung auf dem Weg nach unten ist\n";
+
 }
 
