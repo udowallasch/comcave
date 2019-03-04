@@ -26,6 +26,7 @@ class Figure{
 		Figure(Point p) :p{ p } {};
 public:
 	virtual double area() const { cout << "area aus f\n"; return 0; }
+	virtual ~Figure() { cout << "Figure Destruktor\n"; }// virtual wichtig, damit die Destruktoren der Kinder gerufen werden
 
 };
 
@@ -47,7 +48,7 @@ class Rectangle : public Figure{
 	public:
 		Rectangle(Point p, double breite, double laenge) : Figure{p}, breite{breite}, laenge{laenge}{}
 		~Rectangle() { cout << "Rectangle Destruktor\n"; }
-		double area() const {return breite * laenge;}
+		double area() const override {return breite * laenge;}
 		double circumference() const {return 2 * (breite + laenge);}
 };
 /**
@@ -102,16 +103,18 @@ int main(){
 		gebiet.push_back(r3);
 		gebiet.push_back(c1);
 		gebiet.push_back(c2);
-
-		cout << "\nFlaeche ist: " << getFlaeche(gebiet) << endl;
+		for (auto it : gebiet) delete it;
+		//cout << "\nFlaeche ist: " << getFlaeche(gebiet) << endl;
 		//delete r1;
-		Figure* r = gebiet.at(0);
-		cout << r->area() << endl;
-		delete r1;
+		//Figure* r = gebiet.at(0);
+		//cout << r->area() << endl;
+		//delete r1;
 		//r1->area();
 		//for (auto it : gebiet) delete it;
 		//r1->area();
 	cout << "\ngleich ist schluss "<< endl;
+
+
 
 //	Figure f = r1;
 //	cout << "\nf: " << f.area();
