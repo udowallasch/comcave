@@ -108,8 +108,8 @@ int main()
 	aufgabe2 a2;
 	aufgabe3 a3;
 //	a1.run();
-	a2.run();
-//	a3.run();
+//	a2.run();
+	a3.run();
    
 }
 

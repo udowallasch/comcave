@@ -65,9 +65,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_27_2_mehrfach_vererbun
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_28_2_override", "Task_28_2_override\Task_28_2_override.vcxproj", "{794E130C-993D-4A00-9F82-5662AA1355DA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_1_3", "Task_1_3\Task_1_3.vcxproj", "{8BF16167-797F-4689-A7CD-9AF51BE6EBA3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_01_3", "Task_1_3\Task_1_3.vcxproj", "{8BF16167-797F-4689-A7CD-9AF51BE6EBA3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_4_3", "Task_4_3\Task_4_3.vcxproj", "{9129A8A2-4839-40FF-9BCD-973BAE5EAF8F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task_04_3", "Task_4_3\Task_4_3.vcxproj", "{9129A8A2-4839-40FF-9BCD-973BAE5EAF8F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Klausur", "Klausur\Klausur.vcxproj", "{B0C97207-90DD-43E1-BB17-F07CE766ED31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -578,6 +580,20 @@ Global
 		{9129A8A2-4839-40FF-9BCD-973BAE5EAF8F}.Release|x64.Build.0 = Release|x64
 		{9129A8A2-4839-40FF-9BCD-973BAE5EAF8F}.Release|x86.ActiveCfg = Release|Win32
 		{9129A8A2-4839-40FF-9BCD-973BAE5EAF8F}.Release|x86.Build.0 = Release|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|ARM.ActiveCfg = Debug|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|x64.ActiveCfg = Debug|x64
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|x64.Build.0 = Debug|x64
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|x86.ActiveCfg = Debug|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Debug|x86.Build.0 = Debug|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|Any CPU.ActiveCfg = Release|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|ARM.ActiveCfg = Release|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|ARM64.ActiveCfg = Release|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|x64.ActiveCfg = Release|x64
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|x64.Build.0 = Release|x64
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|x86.ActiveCfg = Release|Win32
+		{B0C97207-90DD-43E1-BB17-F07CE766ED31}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

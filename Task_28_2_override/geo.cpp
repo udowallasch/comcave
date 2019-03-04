@@ -23,8 +23,10 @@ class Point{
 class Figure{
 	protected:
 		Point p;
-		Figure(Point p) :p{ p } {};
+		Figure(Point p) :p{ p } {}
 public:
+	virtual ~Figure() { cout << "~Figure" << endl; }
+
 	virtual double area() const { cout << "area aus f\n"; return 0; }
 
 };
@@ -104,8 +106,8 @@ int main(){
 			gebiet.push_back(c1);
 			gebiet.push_back(c2);
 			//std::cout << "\nFlaeche ist: " << getFlaeche(gebiet) << endl;
-			delete gebiet.at(0);
-			std::cout << "\nFlaeche ist: "  << endl;
+	
+			for (auto it : gebiet) delete it;
 		}
 		//r1->area();
 		//delete r1;

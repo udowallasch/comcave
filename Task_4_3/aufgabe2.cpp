@@ -9,7 +9,8 @@ int minimum(int*, int);
 
 
 void aufgabe2::run() {
-	cout << "min: " << minimum(a,11) << endl;
+	cout << "min: " << minimum(a, 11) << endl;
+	cout << "min: " << *a << endl;
 }
 
 int minimum(int* ia, int len) {
