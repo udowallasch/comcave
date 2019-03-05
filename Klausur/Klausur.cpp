@@ -7,6 +7,9 @@
 #include "aufgabe3.h"
 #include "aufgabe4.h"
 #include "aufgabe5.h"
+#include "aufgabe6.h"
+#include "aufgabe7.h"
+#include "aufgabe8.h"
 
 
 using namespace std;
@@ -25,5 +28,11 @@ int main()
 	a4.run();
 	aufgabe5 a5;
 	a5.run();
+	aufgabe6 a6;
+	a6.run();
+	aufgabe7 a7;
+	a7.run();
+	aufgabe8 a8;
+	a8.run();
 
 }

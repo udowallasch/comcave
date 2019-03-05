@@ -36,6 +36,15 @@
     <ClInclude Include="test.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="aufgabe6.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="aufgabe7.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="aufgabe8.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -60,6 +69,15 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="test.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="aufgabe6.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="aufgabe7.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="aufgabe8.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

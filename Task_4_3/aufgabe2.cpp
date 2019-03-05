@@ -16,7 +16,7 @@ void aufgabe2::run() {
 int minimum(int* ia, int len) {
 	int m = *ia;
 	for (int i = 0; i < len-1; i++ ) {
-		if (*(++ia) < m) m = *ia;
+		if (*++ia < m) m = *ia;
 		cout << *ia << endl;
 	}
 	return m;
