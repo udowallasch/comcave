@@ -120,7 +120,7 @@ using namespace std;
 
 	void printWohnungen(Wohnung* w, int len) {
 		for (int i = 0; i < len; i++) {
-			std::cout << *w << endl;
+			std::cout << w[i] << endl;//Fehlerhaft abgegeben ! : *w
 		}
 	}
 
